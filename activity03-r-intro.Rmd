@@ -107,6 +107,7 @@ top_secret <- readr::read_csv("data/secret_code.csv", col_names = FALSE)
 
 # Pick off only the column X1
 top_secret <- top_secret$X1
+
 ```
 
 By altering this top secret set of numbers, you will be able to create a message.
@@ -118,7 +119,11 @@ Write your own code to complete the steps below.
 4. Square every number.
 
 ```{r}
-
+top_secret14 <-  top_secret + 14
+top_secret18 <- top_secret14 * 18 - 257
+top_secret_e <- exp(top_secret18)
+top_secret_2 <- top_secret_e^2
+top.secret.2 <- data.frame(top_secret_2)
 ```
 
 **HQ UPDATE:** Headquarters has informed you that at this stage of decoding, there should be 496 numbers in the secret message that are below 17.
@@ -131,6 +136,8 @@ Write your own code to complete the steps below.
 10. Turn your matrix back into a vector.
 
 ```{r}
+top_secret_matrix <- matrix(top_secret_2, nrow = 251, ncol = 5)
+evens <- c(top_secret_2$)
 
 ```
 
